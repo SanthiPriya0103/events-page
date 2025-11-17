@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add some custom utilities/animations */
+@layer utilities {
+  .bg-zoom {
+    background-size: cover;
+    background-position: center;
+    animation: slowZoom 25s ease-in-out infinite;
+  }
+
+  .glass {
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+}
+
+/* Slow cinematic zoom */
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+/* fade up used by FadeIn component */
+.fade-up {
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform 700ms cubic-bezier(.2,.9,.3,1), opacity 700ms ease;
+}
+.fade-up.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* gradient background helper */
+.bg-gradient-fade {
+  background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.45));
+}
+@keyframes underlineGrow {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 40%;
+    opacity: 1;
+  }
+  100% {
+    width: 60%;
+    opacity: 1;
+  }
+}
+
+.animate-underline {
+  animation: underlineGrow 1.2s ease-out forwards;
+}
