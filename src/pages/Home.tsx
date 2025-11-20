@@ -1,4 +1,4 @@
-import React from "react";
+
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import AboutSection from "../components/AboutSection";
@@ -18,7 +18,8 @@ const HomePage = () => {
 
        {/* SECTION 1: Transparent → Background visible */}
       <section className="min-h-screen bg-black text-white py-32 px-10">
-        <AboutSection />
+        <h1>Hello from CI/CD test!</h1>
+       <AboutSection />
       </section>
 
       {/* SECTION 2: Solid black background */}
