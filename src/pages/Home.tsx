@@ -13,6 +13,11 @@ const HomePage = () => {
 
       {/* SECTION 1: Transparent → Background visible */}
       <section className="min-h-screen bg-transparent">
+        
+        {/* 👇 CI/CD TEST LINE — EASY TO SEE */}
+        <h1 className="text-5xl font-bold text-yellow-400">
+          Hello from CI/CD test!
+        </h1>
         <HeroSection />
       </section>
 
